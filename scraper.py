@@ -11,7 +11,7 @@ urlToScrape = "http://www.ironman.com/triathlon/events/americas/ironman/chattano
 
 #Global flag indicating we are scraping for first time
 isReset = True
-maxBibID = 100
+maxBibID = 3000
 
 def getRaceName():
     return  urlparse.parse_qs(urlparse.urlparse(urlToScrape).query)['race'][0];
