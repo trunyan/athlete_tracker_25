@@ -7,16 +7,16 @@ import urlparse
 #urlToScrape = "http://tracking.ironmanlive.com/newathlete.php?rid=133&race=newzealand&bib=%s&v=3.0&beta=&1378263600"
 
 #Ironman Cairns 2013
-urlToScrape = "http://tracking.ironmanlive.com/newathlete.php?rid=1143239999&race=cairns&bib=%s&v=3.0&beta=&1378384200"
+#urlToScrape = "http://tracking.ironmanlive.com/newathlete.php?rid=1143239999&race=cairns&bib=%s&v=3.0&beta=&1378384200"
 
 #Ironman Boulder 2015
-#urlToScrape = "http://track.ironman.com/newathlete.php?rid=2147483711&race=boulder70.3&bib=%s&v=3.0&beta=&1434469500"
+urlToScrape = "http://track.ironman.com/newathlete.php?rid=2147483711&race=boulder70.3&bib=%s&v=3.0&beta=&1434469500"
 
 
 
 #Global flag indicating we are scraping for first time
 isReset = True
-maxBibID = 100
+maxBibID = 10
 #maxBibID = 50
 isDebug = False
 
@@ -60,8 +60,8 @@ def parsePage(html):
     athInfo = {}
     
     #Now start populating our data object
-    athInfo['ATHLETE_NAME'] = html.cssselect("h2")[0].text
-    athInfo['DIVISION_RANK'] = html.cssselect("#rank *")[0].tail.strip()
+    athInfo['ATHLETE_NAME'] = html.cssselect("h1")[0].text
+    athInfo['DIVISION_RANK'] = html.cssselect("rank *")[0].tail.strip()
     athInfo['OVERALL_RANK'] = html.cssselect("#div-rank *")[0].tail.strip()    
 
     #infoFields = ['BIB', 'DIVISION', 'AGE', 'STATE', 'COUNTRY', 'PROFESSION']
