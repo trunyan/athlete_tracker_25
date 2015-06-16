@@ -7,16 +7,16 @@ import urlparse
 #urlToScrape = "http://tracking.ironmanlive.com/newathlete.php?rid=133&race=newzealand&bib=%s&v=3.0&beta=&1378263600"
 
 #Ironman Cairns 2013
-#urlToScrape = "http://tracking.ironmanlive.com/newathlete.php?rid=1143239999&race=cairns&bib=%s&v=3.0&beta=&1378384200"
+urlToScrape = "http://tracking.ironmanlive.com/newathlete.php?rid=1143239999&race=cairns&bib=%s&v=3.0&beta=&1378384200"
 
 #Ironman Boulder 2015
-urlToScrape = "http://track.ironman.com/newathlete.php?rid=2147483711&race=boulder70.3&bib=%s&v=3.0&beta=&1434469500"
+#urlToScrape = "http://track.ironman.com/newathlete.php?rid=2147483711&race=boulder70.3&bib=%s&v=3.0&beta=&1434469500"
 
 
 
 #Global flag indicating we are scraping for first time
 isReset = True
-maxBibID = 10
+maxBibID = 100
 #maxBibID = 50
 isDebug = False
 
